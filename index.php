@@ -3,8 +3,10 @@
     $cognome = "Holland";
     $age = "22";
     $spiderman = $nome . " " . $cognome . " " . $age;
+    
     $paragrafoditesto = "lorem ipsum dolor, sit amet consectetur lorem adipisicing elit. Quas assumenda officiis nesciunt obcaecati et recusandae atque cum id saepe illo eum, voluptatibus asperiores ipsa. Aut commodi ducimus doloremque velit magnam.";
-    $nuovastringa = str_replace("lorem", "***", $paragrafoditesto,)
+    $nuovastringa = str_replace("lorem", "***", $paragrafoditesto,);
+    $stringaexplode = explode("lorem", $paragrafoditesto);
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +36,16 @@
     </h4>
     <h4>
         <?php
-            var_dump("la nuova stribga possiede una leength di: " . strlen($nuovastringa) . "caratteri");
+            var_dump("la nuova stringa censura i lorem!");
             echo $nuovastringa;
         ?>
     </h4>
+    <h4>
+        <?php
+            var_dump("la nuova stringa mi ritorna un array di stringhe, in base al delimitatore scelto");
+            var_dump($stringaexplode);
+        ?>
+    </h4>
+
 </body>
 </html>
