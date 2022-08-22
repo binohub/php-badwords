@@ -7,6 +7,7 @@
     $paragrafoditesto = "lorem ipsum dolor, sit amet consectetur lorem adipisicing elit. Quas assumenda officiis nesciunt obcaecati et recusandae atque cum id saepe illo eum, voluptatibus asperiores ipsa. Aut commodi ducimus doloremque velit magnam.";
     $nuovastringa = str_replace("lorem", "***", $paragrafoditesto,);
     $stringaexplode = explode("lorem", $paragrafoditesto);
+    $stringapos = strpos($paragrafoditesto, "ipsa");
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +45,12 @@
         <?php
             var_dump("la nuova stringa mi ritorna un array di stringhe, in base al delimitatore scelto");
             var_dump($stringaexplode);
+        ?>
+    </h4>
+    <h4>
+        <?php
+            var_dump("cerco e ti informa sulla posizione in cui si trova la stringa da lei desiderata (ipsa)");
+            var_dump($stringapos);
         ?>
     </h4>
 
