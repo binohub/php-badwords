@@ -5,7 +5,7 @@
     $spiderman = $nome . " " . $cognome . " " . $age;
     
     $paragrafoditesto = "lorem ipsum dolor, sit amet consectetur lorem adipisicing elit. Quas assumenda officiis nesciunt obcaecati et recusandae atque cum id saepe illo eum, voluptatibus asperiores ipsa. Aut commodi ducimus doloremque velit magnam.";
-    $nuovastringa = str_replace("lorem", "***", $paragrafoditesto,);
+    $nuovastringa = str_replace($_GET['name'], "***", $paragrafoditesto,);
     $stringaexplode = explode("lorem", $paragrafoditesto);
     $stringapos = strpos($paragrafoditesto, "ipsa");
     $stringaucwords = ucwords($paragrafoditesto);
@@ -38,7 +38,7 @@
     </h4>
     <h4>
         <?php
-            var_dump("la nuova stringa censura i lorem!");
+            var_dump("la nuova stringa censura le a!");
             echo $nuovastringa;
         ?>
     </h4>
