@@ -8,6 +8,7 @@
     $nuovastringa = str_replace("lorem", "***", $paragrafoditesto,);
     $stringaexplode = explode("lorem", $paragrafoditesto);
     $stringapos = strpos($paragrafoditesto, "ipsa");
+    $stringaucwords = ucwords($paragrafoditesto);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@
 </head>
 <body>
     <h3>PHP Intro</h3>
-    <h5>
+    <h4>
         <?php
             var_dump($nome);
             var_dump($cognome);
@@ -28,7 +29,7 @@
             var_dump($spiderman);
 
         ?>
-    </h5>
+    </h4>
     <h4>
         <?php
             var_dump("il paragrafo di testo possiede una length di: " . strlen($paragrafoditesto) . " caratteri");
@@ -51,6 +52,12 @@
         <?php
             var_dump("cerco e ti informa sulla posizione in cui si trova la stringa da lei desiderata (ipsa)");
             var_dump($stringapos);
+        ?>
+    </h4>
+    <h4>
+        <?php
+            var_dump("rendo maiuscolo il primo carattere di ogni parola!");
+            var_dump($stringaucwords);
         ?>
     </h4>
 
